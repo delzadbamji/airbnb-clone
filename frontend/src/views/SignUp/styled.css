@@ -1,0 +1,56 @@
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background-color: #414141;
+  z-index: 10;
+  opacity: 0.5;
+}
+.signUp-modal {
+  width: 36vw;
+  height: 66vh;
+  background-color: #ffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 25px;
+  z-index: 11;
+}
+
+.title-header {
+  width: 160px;
+  transform: translate(0px, 16px);
+}
+
+.input-style {
+  width: 28vw;
+  height: 65px;
+  border-radius: 10px;
+}
+.input-container {
+  width: 45vw;
+}
+input::placeholder {
+  left: 10px;
+}
+
+.form-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.custom-button {
+  margin-top: 55px;
+  width: 18vw;
+  height: 65px;
+  background-color: #ff5a5f !important;
+}
+
+input {
+  padding-left: 15px;
+}
