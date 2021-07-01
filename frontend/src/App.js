@@ -8,8 +8,8 @@ function App() {
   const [isLoggedIn,setisLoggedIn] = useState(false);
   return (
     <div className="App">
-      {/* <NavBar isLoggedIn={isLoggedIn} />  */}
-      <Register />
+       <NavBar isLoggedIn={isLoggedIn} /> 
+      // put the homepage here. the NavBar will toggle content based on the login status
     </div>
   );
 }
