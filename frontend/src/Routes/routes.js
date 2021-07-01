@@ -12,7 +12,7 @@ function Routes(){
     <Switch>
       <Route path="/" component={Homepage} exact/>
       <Route path="/register" component={Register}/>
-      <Route path="/signin" component={SignIn}/>
+      <Route path="/signin" component={SignUp}/>
       <Route path="*" component={Error404}/>
     </Switch>   
   </BrowserRouter>
