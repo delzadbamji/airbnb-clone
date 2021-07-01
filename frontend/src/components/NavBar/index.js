@@ -115,7 +115,7 @@ class NavBar extends React.Component {
             lg={{ span: 1, offset: 7 }}
             xl={{ span: 1, offset: 7 }}
             as={"a"}
-            href={"/signup"}
+            href={"/signin"}
             className="Col-signIn Col"
           >
             <h4>Sign in </h4>
