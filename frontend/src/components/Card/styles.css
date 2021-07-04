@@ -1,0 +1,25 @@
+.container {
+  height: 400px;
+  width: 300px;
+  border-color: blue;
+  border: chocolate;
+  border-radius: 8px;
+  border-width: 50px;
+  margin: 50px;
+}
+.image {
+  height: 70%;
+  width: 300px;
+}
+.rating {
+  height: 10%;
+  width: 300px;
+}
+.description {
+  height: 10%;
+  width: 300px;
+}
+.pricetag {
+  height: 10%;
+  width: 300px;
+}
