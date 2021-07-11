@@ -36,7 +36,7 @@ class HomePage extends React.Component {
                   <label for="checkIn">
                     <span
                       className="elementTitle"
-                      style={{ transform: "translate(-11px, 0px)" }}
+                      style={{ transform: "translate(-78px, -22px)" }}
                     >
                       check In
                     </span>
@@ -49,7 +49,7 @@ class HomePage extends React.Component {
                       className="elementTitle"
                       style={{
                         width: "72px",
-                        transform: "translate(5px, 0px)",
+                        transform: "translate(-64px, -22px)"
                       }}
                     >
                       Check Out
@@ -61,7 +61,7 @@ class HomePage extends React.Component {
 
               <div className="location dates">
                 <div className="checking adults">
-                  <label for="adults">
+                  <label for="adults" style={{ height: "20px" }}>
                     <span
                       className="elementTitle"
                       style={{ transform: "translate(-17px, 0px)" }}
@@ -92,7 +92,7 @@ class HomePage extends React.Component {
                   </select>
                 </div>
                 <div className="checking children">
-                  <label for="childs">
+                  <label for="childs" style={{ height: "20px" }}>
                     <span
                       className="elementTitle"
                       style={{ transform: "translate(0px, 0px)" }}
