@@ -10,6 +10,7 @@
 }
 .signUp-modal {
   width: 36vw;
+  max-width: 725px;
   height: 66vh;
   background-color: #ffff;
   position: absolute;

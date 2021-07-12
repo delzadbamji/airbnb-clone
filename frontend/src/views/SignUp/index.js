@@ -40,14 +40,14 @@ class SignUp extends React.Component {
       <>
         {this.state.modalView && (
           <>
-            <div class="overlay" onClick={this.toggleModal}></div>
-            <div class="signUp-modal">
+            <div className="overlay" onClick={this.toggleModal}></div>
+            <div className="signUp-modal">
               <header>
                 <img src={logo} alt="header" style={{ width: "10vw" }}></img>
               </header>
-              <div class="form-container">
+              <div className="form-container">
                 <form>
-                  <div class="input-email-container">
+                  <div className="input-email-container">
                     <input
                       className="input-style"
                       placeholder="Email"
@@ -57,7 +57,7 @@ class SignUp extends React.Component {
                       onChange={(e) => this.emailChange(e)}
                     />
                   </div>
-                  <div class="input-container" style={{ marginTop: 20 }}>
+                  <div className="input-container" style={{ marginTop: 20 }}>
                     <input
                       className="input-style"
                       placeholder="Password"
@@ -68,7 +68,7 @@ class SignUp extends React.Component {
                     />
                   </div>
                   <button
-                    class="btn btn-success custom-button"
+                    className="btn btn-success custom-button"
                     onClick={this.login}
                   >
                     Sign In

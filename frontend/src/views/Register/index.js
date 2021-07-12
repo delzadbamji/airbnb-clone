@@ -8,6 +8,8 @@ class Register extends React.Component {
     super(props);
     this.state = {
       modalView: true,
+      fname: null,
+      lname: null,
       email: null,
       password: null
     };
@@ -25,6 +27,21 @@ class Register extends React.Component {
     this.setState({ password: e.target.value });
   };
 
+  fNameChange = (e) => {
+    this.setState({ fname: e.target.value });
+  };
+  lNameChange = (e) => {
+    this.setState({ lname: e.target.value });
+  };
+  buttonIsDisabled = () => {
+    return this.state.fname &&
+      this.state.lname &&
+      this.state.email &&
+      this.state.password
+      ? false
+      : true;
+  };
+
   register = () => {
     if (this.state.email !== null && this.state.password !== null) {
       //axios.get and validate user exists
@@ -40,56 +57,60 @@ class Register extends React.Component {
       <>
         {this.state.modalView && (
           <>
-            <div class="overlay" onClick={this.toggleModal}></div>
-            <div class="register-modal">
+            <div className="overlay" onClick={this.toggleModal}></div>
+            <div className="register-modal">
               <header>
                 <img src={logo} alt="header" style={{ width: "10vw" }}></img>
               </header>
-              <div class="form-container">
+              <div className="form-container">
                 <form style={{ marginTop: 45 }}>
-                  <div class="input-email-container">
+                  <div className="input-email-container">
                     <input
-                      class="input-style"
+                      className="input-style"
                       placeholder="First Name"
-                      autocomplete="off"
+                      autoComplete="off"
                       type="text"
                       // value=""
-                      onChange={(e) => this.emailChange(e)}
+                      onChange={(e) => this.fNameChange(e)}
                     />
                   </div>
-                  <div class="input-container" style={{ marginTop: 20 }}>
+                  <div className="input-container" style={{ marginTop: 20 }}>
                     <input
-                      class="input-style"
+                      className="input-style"
                       placeholder="Last Name"
-                      autocomplete="off"
+                      autoComplete="off"
                       type="text"
                       // value=""
-                      onChange={(e) => this.passwordChange(e)}
+                      onChange={(e) => this.lNameChange(e)}
                     />
                   </div>
-                  <div class="input-email-container" style={{ marginTop: 20 }}>
+                  <div
+                    className="input-email-container"
+                    style={{ marginTop: 20 }}
+                  >
                     <input
-                      class="input-style"
+                      className="input-style"
                       placeholder="Email"
-                      autocomplete="off"
+                      autoComplete="off"
                       type="email"
                       // value=""
                       onChange={(e) => this.emailChange(e)}
                     />
                   </div>
-                  <div class="input-container" style={{ marginTop: 20 }}>
+                  <div className="input-container" style={{ marginTop: 20 }}>
                     <input
-                      class="input-style"
+                      className="input-style"
                       placeholder="Password"
-                      autocomplete="off"
+                      autoComplete="off"
                       type="password"
                       // value=""
                       onChange={(e) => this.passwordChange(e)}
                     />
                   </div>
                   <button
-                    class="btn btn-success custom-button"
+                    className="btn btn-success custom-button"
                     onClick={this.register}
+                    disabled={this.buttonIsDisabled()}
                   >
                     Accept and Continue
                   </button>
