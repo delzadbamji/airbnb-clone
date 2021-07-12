@@ -20,7 +20,7 @@ class HomePage extends React.Component {
 
             <form>
               <div className="location">
-                <label for="query">
+                <label htmlFor="query">
                   <span className="elementTitle">Location</span>
                 </label>
                 <input
@@ -33,7 +33,7 @@ class HomePage extends React.Component {
 
               <div className="location dates">
                 <div className="checking">
-                  <label for="checkIn">
+                  <label htmlFor="check">
                     <span
                       className="elementTitle"
                       style={{ transform: "translate(-78px, -22px)" }}
@@ -44,7 +44,7 @@ class HomePage extends React.Component {
                   <input type="date" id="check" className="checkIn" />
                 </div>
                 <div className="checking">
-                  <label for="checkIn">
+                  <label htmlFor="check">
                     <span
                       className="elementTitle"
                       style={{
@@ -61,7 +61,7 @@ class HomePage extends React.Component {
 
               <div className="location dates">
                 <div className="checking adults">
-                  <label for="adults" style={{ height: "20px" }}>
+                  <label htmlFor="adults" style={{ height: "20px" }}>
                     <span
                       className="elementTitle"
                       style={{ transform: "translate(-17px, 0px)" }}
@@ -72,9 +72,7 @@ class HomePage extends React.Component {
 
                   <select name="adults" id="adults">
                     <option value="1">1</option>
-                    <option selected="" value="2">
-                      2
-                    </option>
+                    <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
                     <option value="5">5</option>
@@ -92,7 +90,7 @@ class HomePage extends React.Component {
                   </select>
                 </div>
                 <div className="checking children">
-                  <label for="childs" style={{ height: "20px" }}>
+                  <label htmlFor="childs" style={{ height: "20px" }}>
                     <span
                       className="elementTitle"
                       style={{ transform: "translate(0px, 0px)" }}
@@ -102,9 +100,7 @@ class HomePage extends React.Component {
                   </label>
 
                   <select name="adults" id="childs">
-                    <option selected="" value="0">
-                      0
-                    </option>
+                    <option value="0">0</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>

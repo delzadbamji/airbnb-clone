@@ -49,9 +49,9 @@ class SignUp extends React.Component {
                 <form>
                   <div class="input-email-container">
                     <input
-                      class="input-style"
+                      className="input-style"
                       placeholder="Email"
-                      autocomplete="off"
+                      autoComplete="off"
                       type="email"
                       // value=""
                       onChange={(e) => this.emailChange(e)}
@@ -59,9 +59,9 @@ class SignUp extends React.Component {
                   </div>
                   <div class="input-container" style={{ marginTop: 20 }}>
                     <input
-                      class="input-style"
+                      className="input-style"
                       placeholder="Password"
-                      autocomplete="off"
+                      autoComplete="off"
                       type="password"
                       // value=""
                       onChange={(e) => this.passwordChange(e)}
