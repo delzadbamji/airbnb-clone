@@ -7,7 +7,7 @@ class SignUp extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      modalView: false,
+      modalView: true,
       email: null,
       password: null
     };
@@ -77,11 +77,11 @@ class SignUp extends React.Component {
             </div>
           </>
         )}
-        {
+        {/* {
           <button class="btn btn-primary" onClick={this.toggleModal}>
             Login
           </button>
-        }
+        } */}
       </>
     );
   }

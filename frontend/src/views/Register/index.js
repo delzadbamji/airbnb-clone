@@ -7,7 +7,7 @@ class Register extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      modalView: false,
+      modalView: true,
       email: null,
       password: null
     };
@@ -97,11 +97,11 @@ class Register extends React.Component {
             </div>
           </>
         )}
-        {
+        {/* {
           <button class="btn btn-primary" onClick={this.toggleModal}>
             Register
           </button>
-        }
+        } */}
       </>
     );
   }

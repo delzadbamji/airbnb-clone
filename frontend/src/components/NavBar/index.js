@@ -102,7 +102,7 @@ class NavBar extends React.Component {
             xs={12}
             sm={12}
             as={"img"}
-            // href={"/"}
+            href={"/"}
             src={logo}
           >
             {/* <img src={logo} alt="logo"></img> */}
@@ -117,6 +117,7 @@ class NavBar extends React.Component {
             as={"a"}
             href={"/signin"}
             className="Col-signIn Col"
+            // onClick={() => window.location.href + "/signin"}
           >
             <h4>Sign in </h4>
           </Col>
