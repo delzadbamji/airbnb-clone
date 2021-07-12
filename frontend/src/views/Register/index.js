@@ -16,7 +16,7 @@ class Register extends React.Component {
   }
   toggleModal = () => {
     this.setState((prev) => ({ modalView: !prev.modalView }));
-    window.location.href = window.location.href.replace("register", "");
+    this.props.history.push("/");
   };
 
   emailChange = (e) => {
@@ -44,7 +44,7 @@ class Register extends React.Component {
 
   register = () => {
     if (this.state.email !== null && this.state.password !== null) {
-      //axios.get and validate user exists
+      //axios.post
     } else if (this.state.email !== null) {
       //password errors
     } else {

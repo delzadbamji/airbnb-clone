@@ -14,9 +14,9 @@ import {
 // import { Container, Row, Col } from "reactstrap";
 
 class NavBar extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  // }
+  constructor(props) {
+    super(props);
+  }
 
   render() {
     return this.props.isLoggedIn ? (
@@ -68,8 +68,6 @@ class NavBar extends React.Component {
           className="Col"
         >
           <Nav className="mr-auto Col" style={{ width: 128 }}>
-            {/* <Nav.Link href="#home">Home</Nav.Link> */}
-            {/* <Nav.Link href="#features">Features</Nav.Link> */}
             <Nav.Link href="/" className="Col" style={{ color: "#ff5a5f" }}>
               <h4>Sign Out </h4>
             </Nav.Link>
@@ -77,36 +75,19 @@ class NavBar extends React.Component {
         </Col>
       </Row>
     ) : (
-      // {/* </Navbar> */}
-      // <>
-      //  <Row>
-      //   <Col lg={4} xl={4} md={4}>
-      //     <a href="/" className="nav-buttons">
-      //       <img src={logo} className="logo" alt="logo" />
-      //     </a>
-      //   </Col>
-      //   <Col lg={1} xl={1} md={1}>
-      //     <a className="nav-buttons" href="/">
-      //       <h4>Sign Out</h4>
-      //     </a>
-      //   </Col>
-      // </Row>
-      // </>
       <>
         <Row id="row">
           <Col
-            style={{ height: 50 }}
+            style={{ height: 50, cursor: "pointer" }}
             lg={3}
             xl={3}
             md={3}
             xs={12}
             sm={12}
             as={"img"}
-            href={"/"}
+            onClick={() => (window.location.href = "/")}
             src={logo}
-          >
-            {/* <img src={logo} alt="logo"></img> */}
-          </Col>
+          ></Col>
           <Col
             style={{ height: 50, textShadow: " 0 0 black" }}
             xs={12}
@@ -117,7 +98,6 @@ class NavBar extends React.Component {
             as={"a"}
             href={"/signin"}
             className="Col-signIn Col"
-            // onClick={() => window.location.href + "/signin"}
           >
             <h4>Sign in </h4>
           </Col>
