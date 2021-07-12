@@ -14,6 +14,7 @@ class Register extends React.Component {
   }
   toggleModal = () => {
     this.setState((prev) => ({ modalView: !prev.modalView }));
+    window.location.href = window.location.href.replace("register", "");
   };
 
   emailChange = (e) => {
