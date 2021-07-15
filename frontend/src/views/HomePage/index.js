@@ -4,8 +4,44 @@ import "../HomePage/styles.css";
 class HomePage extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      location: null,
+      checkIn: null,
+      checkOut: null,
+      adults: 1,
+      children: 0
+    };
   }
+
+  locationOnChange = (e) => {
+    this.setState({ location: e.target.value });
+  };
+
+  checkInOnChange = (e) => {
+    this.setState({ checkIn: e.target.value });
+  };
+
+  checkOutOnChange = (e) => {
+    this.setState({ checkOut: e.target.value });
+  };
+
+  adultsOnChange = (e) => {
+    this.setState({ adults: e.target.value });
+  };
+
+  childrenOnChange = (e) => {
+    this.setState({ children: e.target.value });
+  };
+
+  gotoResults = async (e) => {
+    // if this.state.location!= null && this.state.children!=null
+    // && this.state.adults!=null
+    e.stopPropagation();
+    e.preventDefault();
+    await console.log(this.state);
+
+    this.props.history.push("/results");
+  };
 
   render() {
     return (
@@ -24,10 +60,12 @@ class HomePage extends React.Component {
                   <span className="elementTitle">Location</span>
                 </label>
                 <input
+                  name="loc"
                   type="text"
                   id="query"
                   className="_loc"
                   placeholder="Anywhere"
+                  onChange={(e) => this.locationOnChange(e)}
                 />
               </div>
 
@@ -41,7 +79,13 @@ class HomePage extends React.Component {
                       check In
                     </span>
                   </label>
-                  <input type="date" id="check" className="checkIn" />
+                  <input
+                    name="checkIn"
+                    type="date"
+                    id="check"
+                    className="checkIn"
+                    onChange={(e) => this.checkInOnChange(e)}
+                  />
                 </div>
                 <div className="checking">
                   <label htmlFor="check">
@@ -55,7 +99,13 @@ class HomePage extends React.Component {
                       Check Out
                     </span>
                   </label>
-                  <input type="date" id="check" className="checkOut" />
+                  <input
+                    name="checkOut"
+                    type="date"
+                    id="check"
+                    className="checkOut"
+                    onChange={(e) => this.checkOutOnChange(e)}
+                  />
                 </div>
               </div>
 
@@ -70,7 +120,12 @@ class HomePage extends React.Component {
                     </span>
                   </label>
 
-                  <select name="adults" id="adults">
+                  <select
+                    name="adults"
+                    id="adults"
+                    defaultValue={this.state.adults}
+                    onChange={(e) => this.adultsOnChange(e)}
+                  >
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -99,7 +154,12 @@ class HomePage extends React.Component {
                     </span>
                   </label>
 
-                  <select name="adults" id="childs">
+                  <select
+                    name="children"
+                    id="childs"
+                    defaultValue={this.state.children}
+                    onChange={(e) => this.childrenOnChange(e)}
+                  >
                     <option value="0">0</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -110,7 +170,12 @@ class HomePage extends React.Component {
                   </select>
                 </div>
                 <div className="search">
-                  <button type="submit" className="searchButton">
+                  <button
+                    // type="button"
+                    type="submit"
+                    className="searchButton"
+                    onClick={(e) => this.gotoResults(e)}
+                  >
                     Search{" "}
                   </button>
                 </div>

@@ -1,6 +1,6 @@
 .container {
   position: absolute;
-  background-color: green;
+  /* background-color: green; */
   width: 100%;
   min-height: 75px;
   display: flex;

@@ -1,35 +1,74 @@
 import React from "react";
 import "./styles.css";
+import axios from "axios";
+import API from "../../Services/index";
+// import { Row, Col } from "react-bootstrap";
+
 class Card extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      realEstate: null,
-    };
   }
-
+  calculateRatings = () => {
+    let stars = this.props.property.review_scores_rating / 20;
+    return stars;
+  };
+  componentDidMount() {
+    console.log(this.props.property);
+  }
   render() {
     return (
       <>
         <div className="container">
-          <div className="image">
-            <img src=""></img>
+          <div>
+            <img
+              alt="Property Pic"
+              className="image"
+              src={this.props.property.picture_url}
+            ></img>
+
+            <div className="propertyName">
+              <span className="propName">{this.props.property.name}</span>
+            </div>
+
+            <div className="rating">
+              <span className="ratings">
+                <i
+                  class="fa fa-star"
+                  style={{ color: "rgb(255, 56, 92)" }}
+                  aria-hidden="true"
+                ></i>
+                {` ${this.calculateRatings()}`}
+              </span>
+              <span> ({this.props.property.number_of_reviews} </span>
+              reviews)
+            </div>
+
+            <div>
+              <span className="details">
+                {this.props.property.accommodates} guests ·{" "}
+              </span>
+
+              <span className="details">
+                {" "}
+                {this.props.property.bedrooms
+                  ? `${this.props.property.bedrooms} bedroom  ·  `
+                  : `Studio  · `}
+              </span>
+
+              <span className="details">{this.props.property.beds} bed </span>
+
+              {this.props.property.bathrooms_text && (
+                <span className="details">{`  ·  ${this.props.property.bathrooms_text}`}</span>
+              )}
+            </div>
+            <div className="pricetag">
+              <span className="price">{this.props.property.price}</span>
+              <span className="price-text"> / night</span>
+            </div>
           </div>
-          <div className="rating">4.79 (164 reviews)</div>
-          <div className="description">
-            Entire cottage | Ithaca | Lake Views
-          </div>
-          <div className="pricetag">$130 / night</div>
         </div>
       </>
     );
   }
 }
-
-// this.state.realEstate.map( eachProperty =>
-// return(
-// <img src={eachProperty.hosting_url} ></img>
-// <accc> eachProperty.accomodaion </accc>
-// )
-// );
 export default Card;

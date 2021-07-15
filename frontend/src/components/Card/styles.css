@@ -2,18 +2,42 @@
   height: 400px;
   width: 300px;
   border-color: blue;
-  border: chocolate;
+  border: black;
   border-radius: 8px;
   border-width: 50px;
-  margin: 50px;
+  margin: 20px;
+  padding: 0px !important;
+  position: relative;
+  /* background-color: #dcdcdc; */
+  background-color: #e8e8e8;
 }
 .image {
-  height: 70%;
-  width: 300px;
+  height: 50%;
+  width: 100%;
+  border-radius: 8px;
+}
+.propertyName {
+  height: 15%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.propName {
+  margin: 25px;
+  justify-content: center;
+  /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+  /* font-family: "Otomanopee One", sans-serif; */
+  /* font-family: 'Roboto', sans-serif; */
+  font-family: "Noto Sans JP", sans-serif;
 }
 .rating {
-  height: 10%;
+  height: 7%;
   width: 300px;
+  color: #717171 !important;
+}
+.ratings {
+  font-weight: 600;
+  color: black;
 }
 .description {
   height: 10%;
@@ -21,5 +45,15 @@
 }
 .pricetag {
   height: 10%;
-  width: 300px;
+  /* width: 300px; */
+}
+.details {
+  color: #717171 !important;
+}
+.price {
+  font-weight: bolder;
+  font-size: larger;
+}
+.price-text {
+  font-size: large;
 }
