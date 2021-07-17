@@ -1,4 +1,3 @@
-import jquery from "jquery";
 import React from "react";
 import "./styled.css";
 import logo from "../../assets/Airbnb_Logo.svg";
@@ -86,11 +85,6 @@ class SignUp extends React.Component {
             </div>
           </>
         )}
-        {/* {
-          <button class="btn btn-primary" onClick={this.toggleModal}>
-            Login
-          </button>
-        } */}
       </>
     );
   }

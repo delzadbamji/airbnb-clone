@@ -1,4 +1,3 @@
-// import jquery from "jquery";
 import React from "react";
 import "./styled.css";
 import logo from "../../assets/Airbnb_Logo.svg";
@@ -78,7 +77,6 @@ class Register extends React.Component {
                       placeholder="First Name"
                       autoComplete="off"
                       type="text"
-                      // value=""
                       onChange={(e) => this.fNameChange(e)}
                     />
                   </div>
@@ -88,7 +86,6 @@ class Register extends React.Component {
                       placeholder="Last Name"
                       autoComplete="off"
                       type="text"
-                      // value=""
                       onChange={(e) => this.lNameChange(e)}
                     />
                   </div>
@@ -101,7 +98,6 @@ class Register extends React.Component {
                       placeholder="Email"
                       autoComplete="off"
                       type="email"
-                      // value=""
                       onChange={(e) => this.emailChange(e)}
                     />
                   </div>
@@ -111,7 +107,6 @@ class Register extends React.Component {
                       placeholder="Password"
                       autoComplete="off"
                       type="password"
-                      // value=""
                       onChange={(e) => this.passwordChange(e)}
                     />
                   </div>
@@ -127,11 +122,6 @@ class Register extends React.Component {
             </div>
           </>
         )}
-        {/* {
-          <button class="btn btn-primary" onClick={this.toggleModal}>
-            Register
-          </button>
-        } */}
       </>
     );
   }

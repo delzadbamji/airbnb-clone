@@ -2,6 +2,7 @@ import React from "react";
 import API from "../../Services/API";
 import Card from "../../components/Card/index";
 import "./style.css";
+import LoadingSpinner from "../../components/Loader/loader";
 
 class ResultPage extends React.Component {
   constructor(props) {
@@ -37,12 +38,14 @@ class ResultPage extends React.Component {
     }
   }
   render() {
-    return (
+    return this.state.listings ? (
       <div className="cardList">
         {this.state.listings.map((property) => {
           return <Card key={property.id} property={property} />;
         })}
       </div>
+    ) : (
+      <LoadingSpinner />
     );
   }
 }

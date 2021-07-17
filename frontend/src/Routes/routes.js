@@ -1,16 +1,10 @@
-import {
-  Route,
-  BrowserRouter,
-  // Link,
-  // useLocation,
-  Switch
-  // useParams
-} from "react-router-dom";
+import { Route, BrowserRouter, Switch } from "react-router-dom";
 import HomePage from "../views/HomePage/index";
 import Register from "../views/Register/index";
 import SignUp from "../views/SignUp/index";
 import Error404 from "../views/Error404/index";
 import ResultPage from "../views/ResultPage/index";
+
 function Routes() {
   return (
     <BrowserRouter>
