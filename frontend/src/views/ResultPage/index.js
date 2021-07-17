@@ -1,5 +1,5 @@
 import React from "react";
-import API from "../../Services/index";
+import index from "../../Services/index";
 import Card from "../../components/Card/index";
 import "./style.css";
 
@@ -16,7 +16,7 @@ class ResultPage extends React.Component {
   };
 
   componentDidMount() {
-    API.getListings().then((res) => {
+    index.getListings().then((res) => {
       const listings = res.data.hostings;
       this.getData(listings);
     });

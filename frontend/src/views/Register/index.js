@@ -1,4 +1,4 @@
-import jquery from "jquery";
+// import jquery from "jquery";
 import React from "react";
 import "./styled.css";
 import logo from "../../assets/Airbnb_Logo.svg";
@@ -42,14 +42,22 @@ class Register extends React.Component {
       : true;
   };
 
-  register = () => {
-    if (this.state.email !== null && this.state.password !== null) {
-      //axios.post
-    } else if (this.state.email !== null) {
-      //password errors
-    } else {
-      //email errors
-    }
+  /**
+   * Until we don't have a route to authenticate and allow a user to get validated,
+   * we shall simulate the login by storing a flag in the cookie.
+   */
+  register = (e) => {
+    // if (this.state.email !== null && this.isValidPassword()) {
+    //   //axios.post if user doesnt exist (ask them to sign in if exist)
+    // } else if (this.state.email !== null && !this.isValidPassword()) {
+    //   //password errors
+    // } else {
+    //   //check email errors
+    // }
+    e.preventDefault();
+    localStorage.setItem("loggedIn", "true");
+    this.props.history.push("/");
+    window.location.reload(); // sad, but necessary for now
   };
 
   render() {
@@ -109,7 +117,7 @@ class Register extends React.Component {
                   </div>
                   <button
                     className="btn btn-success custom-button"
-                    onClick={this.register}
+                    onClick={(e) => this.register(e)}
                     disabled={this.buttonIsDisabled()}
                   >
                     Accept and Continue

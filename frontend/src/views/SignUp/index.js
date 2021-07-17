@@ -25,14 +25,22 @@ class SignUp extends React.Component {
     this.setState({ password: e.target.value });
   };
 
-  login = () => {
-    if (this.state.email !== null && this.state.password !== null) {
-      //axios.get and validate user exists
-    } else if (this.state.email !== null) {
-      //password errors
-    } else {
-      //email errors
-    }
+  /**
+   * Until we don't have a route to authenticate and allow a user to get validated,
+   * we shall simulate the login by storing a flag in the cookie.
+   */
+  login = (e) => {
+    // if (this.state.email !== null && this.isValidPassword()) {
+    //   //axios.get if user exista (ask them to register if not exists)
+    // } else if (this.state.email !== null && !this.isValidPassword()) {
+    //   //password errors
+    // } else {
+    //   //check email errors
+    // }
+    e.preventDefault();
+    localStorage.setItem("loggedIn", "true");
+    this.props.history.push("/");
+    window.location.reload(); // sad, but necessary for now
   };
 
   render() {
@@ -69,7 +77,7 @@ class SignUp extends React.Component {
                   </div>
                   <button
                     className="btn btn-success custom-button"
-                    onClick={this.login}
+                    onClick={(e) => this.login(e)}
                   >
                     Sign In
                   </button>

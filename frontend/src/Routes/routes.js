@@ -1,10 +1,10 @@
 import {
   Route,
   BrowserRouter,
-  Link,
-  useLocation,
-  Switch,
-  useParams
+  // Link,
+  // useLocation,
+  Switch
+  // useParams
 } from "react-router-dom";
 import HomePage from "../views/HomePage/index";
 import Register from "../views/Register/index";

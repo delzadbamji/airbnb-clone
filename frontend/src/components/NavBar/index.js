@@ -11,16 +11,27 @@ import {
   FormControl,
   Button
 } from "react-bootstrap";
-// import { Container, Row, Col } from "reactstrap";
 
 class NavBar extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      isLoggedIn: localStorage.getItem("loggedIn") ? true : false
+    };
   }
+  /**
+   * Until we don't have a route to authenticate and allow a user to get validated,
+   * we shall simulate the login by storing a flag in the storage.
+   */
+
+  logout = () => {
+    localStorage.removeItem("loggedIn");
+    this.setState({ isLoggedIn: false });
+  };
 
   render() {
-    return this.props.isLoggedIn ? (
-      // <Navbar bg="light" variant="light">
+    // return this.props.isLoggedIn ? (
+    return this.state.isLoggedIn ? (
       <Row id="row">
         <Col
           lg={3}
@@ -47,11 +58,16 @@ class NavBar extends React.Component {
               type="text"
               placeholder="Search"
               className="mr-sm-2"
-              style={{ transform: "translate(10px, 5px)", height: 40 }}
+              style={{
+                transform: "translate(10px, 5px)",
+                marginLeft: 20,
+                height: 40,
+                width: 500
+              }}
             />
             <Button
               variant="outline-primary"
-              style={{ transform: "translate(304px, -35px)" }}
+              style={{ transform: "translate(304px, -35px)", marginLeft: 85 }}
               type="submit"
             >
               Search
@@ -68,7 +84,12 @@ class NavBar extends React.Component {
           className="Col"
         >
           <Nav className="mr-auto Col" style={{ width: 128 }}>
-            <Nav.Link href="/" className="Col" style={{ color: "#ff5a5f" }}>
+            <Nav.Link
+              href="/"
+              className="Col"
+              style={{ color: "#ff5a5f" }}
+              onClick={() => this.logout()}
+            >
               <h4>Sign Out </h4>
             </Nav.Link>
           </Nav>
