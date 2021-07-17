@@ -1,0 +1,84 @@
+h1 {
+    color: black;
+    letter-spacing: 0.04em;
+    padding: 0 10px;
+    margin-bottom: 5px;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
+      Helvetica Neue, sans-serif;
+    margin-bottom: 8px !important;
+  }
+  
+  .title {
+    width: calc(100% - 10px) !important;
+    padding: 2px 16px !important;
+    box-shadow: #dddddd 0 0 0 1px inset !important;
+    border-radius: 5px !important;
+    display: inline-block !important;
+    height: 50px;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  
+  .below-title {
+    width: calc(100% - 10px) !important;
+    padding: 2px 16px !important;
+    border-radius: 5px !important;
+    display: inline-block !important;
+    text-align: left;
+  }
+  
+  .checkinbox {
+    text-align: center;
+    background-color: white;
+    /*hsla(305%, 12%, 61%, 1);*/
+    border: 3px dotted white;
+    /*hsla(327%, 19%, 45%, 1);*/
+    height: 220px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 10px !important;
+    width: 420px !important;
+    background: #ffffff !important;
+    border-radius: 12px !important;
+    box-shadow: 0px 6px 20px rgb(0 0 0 / 20%) !important;
+    float: right;
+    position:fixed; top:14%; right:2%;
+    
+  }
+  
+  .attribute { 
+    float: left;
+    margin-left: 0px;
+  }
+  
+  hr.line {
+    width: 500px;
+    margin-left: 250px;
+  }
+  
+  .left-element {
+    display: inline-block;
+    float: left;
+  }
+  
+  .right-element {
+    display: inline-block;
+    float: right;
+  }
+  
+  .review {
+    clear:both;
+    text-align: left;
+    margin-left: 100px;
+  }
+  
+  .review-table {
+    margin-top: 20px;
+    border-collapse: separate;
+    border-spacing: 250px 15px;
+  }
+  
+  .map {
+    text-align: left;
+    margin-left: 100px;
+  }
