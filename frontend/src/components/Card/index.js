@@ -19,6 +19,13 @@ class Card extends React.Component {
     });
   };
 
+  capitalizeName = () => {
+    return (
+      this.props.property.neighbourhood.charAt(0).toUpperCase() +
+      this.props.property.neighbourhood.slice(1)
+    );
+  };
+
   render() {
     return (
       <>
@@ -32,6 +39,9 @@ class Card extends React.Component {
 
             <div className="propertyName">
               <span className="propName">{this.props.property.name}</span>
+            </div>
+            <div className="NeighbourhoodName">
+              <span className="area">Location: {this.capitalizeName()}</span>
             </div>
 
             <div className="rating">

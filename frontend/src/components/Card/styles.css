@@ -8,8 +8,8 @@
   margin: 20px;
   padding: 0px !important;
   position: relative;
-  /* background-color: #dcdcdc; */
   background-color: #e8e8e8;
+  cursor: pointer;
 }
 .image {
   height: 50%;
@@ -17,19 +17,26 @@
   border-radius: 8px;
 }
 .propertyName {
-  height: 15%;
+  height: 0%;
   justify-content: center;
   align-items: center;
   display: flex;
+  margin-bottom: 29px;
+  margin-top: 25px;
 }
 .propName {
   margin: 25px;
   justify-content: center;
-  /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
-  /* font-family: "Otomanopee One", sans-serif; */
-  /* font-family: 'Roboto', sans-serif; */
   font-family: "Noto Sans JP", sans-serif;
 }
+.area {
+  color: rgb(255, 56, 92);
+}
+.NeighbourhoodName {
+  font-family: "Noto Sans JP", sans-serif;
+  margin-bottom: 10px;
+}
+
 .rating {
   height: 7%;
   width: 300px;
@@ -45,7 +52,6 @@
 }
 .pricetag {
   height: 10%;
-  /* width: 300px; */
 }
 .details {
   color: #717171 !important;

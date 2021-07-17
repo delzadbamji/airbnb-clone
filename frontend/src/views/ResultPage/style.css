@@ -1,6 +1,5 @@
 .cardList {
   display: flex;
-  /* padding: 50px; */
   margin: 20px;
   flex-wrap: wrap;
   flex-direction: row;

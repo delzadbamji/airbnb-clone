@@ -178,7 +178,6 @@ class HomePage extends React.Component {
                 </div>
                 <div className="search">
                   <button
-                    // type="button"
                     type="submit"
                     className="searchButton"
                     onClick={(e) => this.gotoResults(e)}
