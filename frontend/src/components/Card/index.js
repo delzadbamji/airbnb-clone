@@ -2,7 +2,6 @@ import React from "react";
 import "./styles.css";
 import axios from "axios";
 import API from "../../Services/API";
-// import { Row, Col } from "react-bootstrap";
 
 class Card extends React.Component {
   constructor(props) {
@@ -12,13 +11,18 @@ class Card extends React.Component {
     let stars = this.props.property.review_scores_rating / 20;
     return stars;
   };
-  componentDidMount() {
-    console.log(this.props.property);
-  }
+
+  gotoDetails = () => {
+    this.props.history.push({
+      pathname: "/rental",
+      state: { property: this.props.property }
+    });
+  };
+
   render() {
     return (
       <>
-        <div className="container">
+        <div className="container" onClick={() => this.gotoDetails()}>
           <div>
             <img
               alt="Property Pic"
@@ -33,7 +37,7 @@ class Card extends React.Component {
             <div className="rating">
               <span className="ratings">
                 <i
-                  class="fa fa-star"
+                  className="fa fa-star"
                   style={{ color: "rgb(255, 56, 92)" }}
                   aria-hidden="true"
                 ></i>

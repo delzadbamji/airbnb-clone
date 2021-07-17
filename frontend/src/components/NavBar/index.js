@@ -16,7 +16,8 @@ class NavBar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isLoggedIn: localStorage.getItem("loggedIn") ? true : false
+      isLoggedIn: localStorage.getItem("loggedIn") ? true : false,
+      location: null
     };
   }
   /**
@@ -27,6 +28,24 @@ class NavBar extends React.Component {
   logout = () => {
     localStorage.removeItem("loggedIn");
     this.setState({ isLoggedIn: false });
+  };
+
+  updateLocation = (e) => {
+    this.setState({ location: e.target.value });
+  };
+
+  getResults = (e) => {
+    e.stopPropagation();
+    e.preventDefault();
+    console.log("here");
+    if (this.state.location !== null) {
+      this.props.history.push({
+        pathname: `/results/${this.state.location}`,
+        state: { loc: this.state.location }
+      });
+    } else {
+      console.log("some details are incomplete");
+    }
   };
 
   render() {
@@ -64,11 +83,13 @@ class NavBar extends React.Component {
                 height: 40,
                 width: 500
               }}
+              onChange={(e) => this.updateLocation(e)}
             />
             <Button
               variant="outline-primary"
               style={{ transform: "translate(304px, -35px)", marginLeft: 85 }}
               type="submit"
+              onClick={(e) => this.getResults(e)}
             >
               Search
             </Button>

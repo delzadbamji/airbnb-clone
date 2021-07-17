@@ -1,6 +1,5 @@
 import React from "react";
 import "../HomePage/styles.css";
-
 class HomePage extends React.Component {
   constructor(props) {
     super(props);
@@ -34,13 +33,21 @@ class HomePage extends React.Component {
   };
 
   gotoResults = async (e) => {
-    // if this.state.location!= null && this.state.children!=null
-    // && this.state.adults!=null
     e.stopPropagation();
     e.preventDefault();
-    await console.log(this.state);
-
-    this.props.history.push("/results");
+    // if (
+    //   this.state.location !== null &&
+    //   this.state.adults >= 1 &&
+    //   this.state.checkIn !== null &&
+    //   this.state.checkOut !== null
+    // ) {
+    this.props.history.push({
+      pathname: `/results/${this.state.location}`,
+      state: { loc: this.state.location }
+    });
+    // } else {
+    //   console.log("some details are incomplete");
+    // }
   };
 
   render() {
