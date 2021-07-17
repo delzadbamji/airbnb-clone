@@ -225,40 +225,10 @@ class Home extends Component {
             </table>
             </div>
 
-            {/* <div id="googleMap" style={{width:"100%", height:"400px"}}></div> */}
-
-            {/* <script>
-            let map;
-            const google = window.google;
-            const google = GoogleMapReact.window.google;
-            function initMap() {
-            map = new google.maps.Map(document.getElementById("map"), {
-              center: { lat: -34.397, lng: 150.644 },
-              zoom: 8,
-            })};
-            </script> */}
-
-          {/* <div className="google-map" style={{ height: '100vh', width: '100%' }}>
-            <GoogleMapReact
-              bootstrapURLKeys={{ key: "AIzaSyBD15_Ko2weAdBaco740NQpdChbKR6vMqY" }}
-              defaultCenter={location}
-              defaultZoom={11}
-            >
-            <LocationPin
-              lat={location.lat}
-              lng={location.lng}
-              text="My Marker"
-            />
-            </GoogleMapReact>
-          </div> */}
-        
+            
         <div id="map-container-google-1" class="z-depth-1-half map-container" style={{height: "500px"}}>
         <iframe src={src.src} width="100%" height="400" frameborder="0" title={src.src} style={{border:"0"}}></iframe>')
         </div>
-
-        {/* <div id="map-default" class="map-canvas" data-lat="40.748817" data-lng="-73.985428" style={{height: "600px", width: "600px"}}></div>
-
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBD15_Ko2weAdBaco740NQpdChbKR6vMqY"></script> */}
           
           <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
