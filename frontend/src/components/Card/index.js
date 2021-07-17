@@ -1,7 +1,7 @@
 import React from "react";
 import "./styles.css";
 import axios from "axios";
-import API from "../../Services/index";
+import API from "../../Services/API";
 // import { Row, Col } from "react-bootstrap";
 
 class Card extends React.Component {
