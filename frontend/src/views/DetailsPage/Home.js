@@ -34,12 +34,14 @@ class Home extends Component {
         <div>
           <div className = "title">
             {/* <h1>div for property name, 'superhost/not', location, review link, share save button  {this.props.data.name} </h1> */}
-            <h1>{this.props.data.name} near {this.props.data.host.host_neighbourhood}</h1>
+            <h3>{this.props.data.name}</h3>
+            <h4>{this.props.data.host.host_neighbourhood}</h4>
+            <br></br>
           </div>
           <div className = "below-title">
             <h4>
-              {this.props.data.review_scores.review_scores_rating.$numberInt} ({this.props.data.number_of_reviews.$numberInt} reviews) 
-               {this.props.data.host.host_location}
+              <a href ="#review">{this.props.data.review_scores.review_scores_rating.$numberInt} ({this.props.data.number_of_reviews.$numberInt} reviews)</a> 
+              &nbsp; &nbsp; &nbsp; &nbsp;{this.props.data.host.host_location}
             </h4>
           </div>
         </div>
@@ -192,8 +194,8 @@ class Home extends Component {
             </div>
           </div>
           
-          <div className="review">
-            <h1>Reviews</h1>
+          <div id = "review" className="review">
+            <h3>Reviews</h3>
             <table className="review-table">
             <tr >
               <td>Cleanliness</td>
@@ -225,7 +227,13 @@ class Home extends Component {
             </table>
             </div>
 
-            
+        <div>
+          <hr className="line"/>
+          <br></br>
+          <br></br>
+          <br></br>
+          <h3 style={{textAlign: "left", marginLeft: "100px"}}>Where you'll be</h3>
+        </div>
         <div id="map-container-google-1" class="z-depth-1-half map-container" style={{height: "500px"}}>
         <iframe src={src.src} width="100%" height="400" frameborder="0" title={src.src} style={{border:"0"}}></iframe>')
         </div>
