@@ -1,0 +1,149 @@
+/* h1 {
+    color: black;
+    letter-spacing: 0.04em;
+    padding: 0 10px;
+    margin-bottom: 5px;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
+      Helvetica Neue, sans-serif;
+    margin-bottom: 8px !important;
+  } */
+  
+  .title {
+    width: calc(100% - 10px) !important;
+    padding: 2px 16px !important;
+    /* box-shadow: #dddddd 0 0 0 1px inset !important; */
+    border-radius: 5px !important;
+    display:flex;
+    height: 80px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    text-align: left;
+    font-family: Circular, -apple-system, BlinkMacSystemFont,
+    Helvetica Neue, sans-serif ;
+    font-weight:bold;
+  }
+  
+  .below-title {
+    width: calc(100% - 10px) !important;
+    padding: 2px 16px !important;
+    border-radius: 5px !important;
+    display: inline-block !important;
+    text-align: left;
+    margin-left: 65px;
+    margin-right: 100px;
+    font-family: Circular, -apple-system, BlinkMacSystemFont,
+    Helvetica Neue, sans-serif ;
+    font-weight:bold;
+  }
+  
+  .checkinbox {
+    text-align: center;
+    background-color: white;
+    /*hsla(305%, 12%, 61%, 1);*/
+    border: 3px dotted white;
+    /*hsla(327%, 19%, 45%, 1);*/
+    height: 220px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 10px !important;
+    width: 420px !important;
+    background: #ffffff !important;
+    border-radius: 12px !important;
+    box-shadow: 0px 6px 20px rgb(0 0 0 / 20%) !important;
+    float: right;
+    position:fixed; top:20%; right:2%;
+  }
+  
+  .image-carousel {
+    height: "200px";
+    width: "500px";
+    padding: "100px";
+    margin: "auto";
+    display: block;
+    width: 100%;
+  }
+  .attribute { 
+    float: left;
+    margin-left: 0px;
+    display: block;
+    clear: both;
+    font-family: Circular, -apple-system, BlinkMacSystemFont,
+    Helvetica Neue, sans-serif ;
+  }
+  
+  .icon {
+    position: relative;
+    /* Adjust these values accordingly */
+    top: 5px;
+    left: 5px;
+  }
+  hr.line {
+    width: 500px;
+    margin-left: 100px;
+  }
+
+  hr.bigline {
+    width: 1200px;
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+  
+  .left-element {
+    display: inline-block;
+    float: left;
+  }
+  
+  .right-element {
+    display: inline-block;
+    float: right;
+  }
+  
+  .review {
+    clear:both;
+    text-align: left;
+    margin-left: 100px;
+    margin-top: 20px;
+    border-collapse: separate;
+    border-spacing: 250px 15px;
+    font-family: Circular, -apple-system, BlinkMacSystemFont,
+    Helvetica Neue, sans-serif ;
+  }
+
+  .map {
+    text-align: left;
+    margin-left: 100px;
+    font-family: Circular, -apple-system, BlinkMacSystemFont,
+    Helvetica Neue, sans-serif ;
+  }
+
+  .hostinfo {
+    text-align: left;
+    margin-left: 100px;
+    margin-right: 800px;
+  }
+
+  .calendar {
+    margin-left: 100px;
+    margin-right: 700px;
+    border-collapse: separate;
+    border-spacing: 25px 15px;
+  }
+
+  /* .outerchild {
+    background-color: white;
+    position: absolute;
+    max-width: 100% !important;
+    width: 100% !important;
+    object-fit: cover !important;
+    height: 100% !important;
+    margin-left: 25% !important;
+    border-radius: 8px !important;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
+    Helvetica Neue, sans-serif !important;
+    font-size: 10px !important;
+    line-height: 12px !important;
+    color: #222222 !important;
+    text-transform: uppercase !important;
+    align-items: left;
+  align-content: flex-start;
+  } */

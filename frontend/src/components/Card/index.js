@@ -12,13 +12,6 @@ class Card extends React.Component {
     return stars;
   };
 
-  gotoDetails = () => {
-    this.props.history.push({
-      pathname: "/rental",
-      state: { property: this.props.property }
-    });
-  };
-
   capitalizeName = () => {
     return (
       this.props.property.neighbourhood.charAt(0).toUpperCase() +
@@ -29,7 +22,7 @@ class Card extends React.Component {
   render() {
     return (
       <>
-        <div className="container" onClick={() => this.gotoDetails()}>
+        <div className="container" onClick = {this.props.onClick}>
           <div>
             <img
               alt="Property Pic"
