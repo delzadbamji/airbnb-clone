@@ -37,11 +37,20 @@ class ResultPage extends React.Component {
       this.getAllListings();
     }
   }
+
+  gotoDetails = (p) => {
+    // console.log(typeof(p))
+    this.props.history.push({
+      pathname: "/details",
+      state: { property: p }
+    });
+  };
+
   render() {
     return this.state.listings ? (
       <div className="cardList">
         {this.state.listings.map((property) => {
-          return <Card key={property.id} property={property} />;
+          return <Card key={property.id} property={property} onClick={() => this.gotoDetails(property)}/>;
         })}
       </div>
     ) : (
