@@ -73,6 +73,7 @@ class DetailsPage extends Component {
           <div className = "title">
             <br></br>
             <h3>{this.state.homeDetails.name}</h3>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
             <h4>{this.state.homeDetails.host_neighbourhood}</h4>
             <br></br>
           </div>
@@ -268,7 +269,8 @@ class DetailsPage extends Component {
                     <td></td>
                   </tr>
                 </table>
-                <p style={{float:"right"}}>Clear dates</p>
+                {/* <p style={{float:"right"}}>Clear dates</p> */}
+                <button type="button" className="btn btn-light" style={{float: "right"}}>Clear dates</button>
               </div>
               </div>
               < hr className="line"/>
@@ -353,11 +355,11 @@ class DetailsPage extends Component {
               <td>&nbsp; &nbsp; &nbsp; &nbsp; Accuracy &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{this.state.homeDetails.review_scores_accuracy/2}</td> 
             </tr>
             <tr>
-              <td>Communication &nbsp; &nbsp; &nbsp; &nbsp;  {this.state.homeDetails.review_scores_communication/2}</td>
+              <td>Communication &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {this.state.homeDetails.review_scores_communication/2}</td>
               <td>&nbsp; &nbsp; &nbsp; &nbsp; Location &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {this.state.homeDetails.review_scores_location/2}</td>
             </tr>
             <tr>
-              <td>Check-in &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{this.state.homeDetails.review_scores_checkin/2}</td>
+              <td>Check-in &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{this.state.homeDetails.review_scores_checkin/2}</td>
               <td>&nbsp; &nbsp; &nbsp; &nbsp; Value &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{this.state.homeDetails.review_scores_value/2}</td>
             </tr>
             </table>
